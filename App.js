@@ -1,6 +1,8 @@
 
 import { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { AntDesign } from '@expo/vector-icons';
+
 
 export default function App() {
   const  [content] = useState('123456789');
@@ -71,7 +73,7 @@ export default function App() {
         </View>
         <View style={styles.buttonRow}>
           <View style={styles.button}>
-            <Text style={styles.text}>{'<-'}</Text>
+          <AntDesign name="reload1" size={24} color="white" />
           </View>
           <View style={styles.button} >
             <Text style={styles.text}>0</Text>
@@ -94,7 +96,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
-    
     flex:1
   },
   buttonSection: {
@@ -142,7 +143,9 @@ const styles = StyleSheet.create({
     color: 'white',
     backgroundColor: '#22252e',
     flex: 4,
-    width: '100%'
+    width: '100%',
+    alignItems:"flex-end",
+    justifyContent:"flex-end"
   }
 
 });

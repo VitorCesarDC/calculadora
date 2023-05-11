@@ -1,8 +1,8 @@
 
 import { useState } from 'react';
-import { StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View, touchableOpacity} from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
-import { TouchableOpacity } from 'react-native-web';
+import { TouchableOpacity } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 
 export default function App() {
@@ -84,74 +84,132 @@ export default function App() {
       </View>
       <View style={styles.buttonSection}>
         <View style={styles.buttonRow}>
+        <TouchableOpacity style={styles.button} onPress={()=> handleInput("AC")}>
           <View style={styles.button} >
-          <TouchableOpacity style={styles.button} onPress={()=> handleInput("AC")}><Text style={styles.text2}>AC</Text></TouchableOpacity>
+          <Text style={styles.text2}>AC</Text>
           </View>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={()=> handleInput("+/-")}>
           <View style={styles.button} >
-          <TouchableOpacity style={styles.button} onPress={()=> handleInput("+/-")}><MaterialCommunityIcons name="plus-minus-variant" size={24} color="#49efcb" /></TouchableOpacity>
+          <MaterialCommunityIcons name="plus-minus-variant" size={24} color="#49efcb" />
           </View>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={()=> handleInput("%")}>
           <View style={styles.button} >
-          <TouchableOpacity style={styles.button} onPress={()=> handleInput("%")}><Text style={styles.text2}>%</Text></TouchableOpacity>
+          <Text style={styles.text2}>%</Text>
           </View>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={()=> handleInput("÷")}>
           <View style={styles.button} >
-          <TouchableOpacity style={styles.button} onPress={()=> handleInput("÷")}><Text style={styles.text3}>÷</Text></TouchableOpacity>
+          <Text style={styles.text3}>÷</Text>
           </View>
+          </TouchableOpacity>
         </View>
         <View style={styles.buttonRow}>
+        <TouchableOpacity style={styles.button} onPress={()=> handleInput("7")}>
           <View style={styles.button} >
-          <TouchableOpacity style={styles.button} onPress={()=> handleInput("7")}><Text style={styles.text}>7</Text></TouchableOpacity>
+          <Text style={styles.text}>7</Text>
           </View>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={()=> handleInput("8")}>
           <View style={styles.button} >
-          <TouchableOpacity style={styles.button} onPress={()=> handleInput("8")}><Text style={styles.text}>8</Text></TouchableOpacity>
+          <Text style={styles.text}>8</Text>
           </View>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={()=> handleInput("9")}>
           <View style={styles.button} >
-          <TouchableOpacity style={styles.button} onPress={()=> handleInput("9")}><Text style={styles.text}>9</Text></TouchableOpacity>
+          <Text style={styles.text}>9</Text>
           </View>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={()=> handleInput("×")}>
           <View style={styles.button} >
-          <TouchableOpacity style={styles.button} onPress={()=> handleInput("×")}><Text style={styles.text3}>×</Text></TouchableOpacity>
+          <Text style={styles.text3}>×</Text>
           </View>
+          </TouchableOpacity>
         </View>
+
+
         <View style={styles.buttonRow}>
+        <TouchableOpacity style={styles.button} onPress={()=> handleInput("4")}>
           <View style={styles.button}>
-          <TouchableOpacity style={styles.button} onPress={()=> handleInput("4")}><Text style={styles.text}>4</Text></TouchableOpacity>
+          <Text style={styles.text}>4</Text>
           </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.button} onPress={()=> handleInput("5")}>
           <View style={styles.button} >
-          <TouchableOpacity style={styles.button} onPress={()=> handleInput("5")}><Text style={styles.text}>5</Text></TouchableOpacity>
+          <Text style={styles.text}>5</Text>
           </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.button} onPress={()=> handleInput("6")}>
           <View style={styles.button} >
-          <TouchableOpacity style={styles.button} onPress={()=> handleInput("6")}><Text style={styles.text}>6</Text></TouchableOpacity>
+          <Text style={styles.text}>6</Text>
           </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.button} onPress={()=> handleInput("-")}>
           <View style={styles.button} >
-          <TouchableOpacity style={styles.button} onPress={()=> handleInput("-")}><Text style={styles.text3}>-</Text></TouchableOpacity>
+          <Text style={styles.text3}>-</Text>
           </View>
+          </TouchableOpacity>
         </View>
+      
+
+
         <View style={styles.buttonRow}>
+
+        <TouchableOpacity style={styles.button} onPress={()=> handleInput("1")}>
           <View style={styles.button}>
-          <TouchableOpacity style={styles.button} onPress={()=> handleInput("1")}><Text style={styles.text}>1</Text></TouchableOpacity>
+          <Text style={styles.text}>1</Text>
           </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.button} onPress={()=> handleInput("2")}>
+            <View style={styles.button}>
+            <Text style={styles.text}>2</Text>
+            </View>
+            </TouchableOpacity>
+
+          <TouchableOpacity style={styles.button} onPress={()=> handleInput("3")}>
           <View style={styles.button} >
-            <TouchableOpacity style={styles.button} onPress={()=> handleInput("2")}><Text style={styles.text}>2</Text></TouchableOpacity>
+            <Text style={styles.text}>3</Text>
           </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.button} onPress={()=> handleInput("+")}>
           <View style={styles.button} >
-            <TouchableOpacity style={styles.button} onPress={()=> handleInput("3")}><Text style={styles.text}>3</Text></TouchableOpacity>
+           <Text style={styles.text3}>+</Text>
           </View>
-          <View style={styles.button} >
-            <TouchableOpacity style={styles.button} onPress={()=> handleInput("+")}><Text style={styles.text3}>+</Text></TouchableOpacity>
-          </View>
+          </TouchableOpacity>
         </View>
+
+
         <View style={styles.buttonRow}>
+          
+        <TouchableOpacity style={styles.button} onPress={()=> handleInput("back")}>
           <View style={styles.button}>
-          <TouchableOpacity style={styles.button} onPress={()=> handleInput("back")}><AntDesign name="reload1" size={24} color="white" style={{ transform: [{ scaleX: -1 }]}}/></TouchableOpacity>
+          <AntDesign name="reload1" size={24} color="white" style={{ transform: [{ scaleX: -1 }]}}/>
           </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.button} onPress={()=> handleInput("0")}>
           <View style={styles.button} >
-          <TouchableOpacity style={styles.button} onPress={()=> handleInput("0")}><Text style={styles.text}>0</Text></TouchableOpacity>
+          <Text style={styles.text}>0</Text>
           </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.button} onPress={()=> handleInput(".")}>
           <View style={styles.button} >
-          <TouchableOpacity style={styles.button} onPress={()=> handleInput(".")}><Text style={styles.text}>.</Text></TouchableOpacity>
+          <Text style={styles.text}>.</Text>
           </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.button} onPress={()=> handleInput("=")}>
           <View style={styles.button} >
-          <TouchableOpacity style={styles.button} onPress={()=> handleInput("=")}><Text style={styles.text3}>=</Text></TouchableOpacity>
+          <Text style={styles.text3}>=</Text>
           </View>
+          </TouchableOpacity>
         </View>
       </View>
     </View >

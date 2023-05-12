@@ -32,6 +32,7 @@ export default function App() {
       return
     }
   }
+  
 
 
   function handleInput(keyboardPressed){
@@ -42,7 +43,11 @@ export default function App() {
       return
     }
     if(keyboardPressed === "×" | keyboardPressed === "÷" | keyboardPressed === "+" | keyboardPressed === "-"){    
-      setCurrentNumber(currentNumber + " " + keyboardPressed + " ")      
+      setCurrentNumber(currentNumber + " " + keyboardPressed + " ") 
+      
+      keyboardPressed+calculator()
+      
+       
       return
     }
     if(keyboardPressed === "back"){
@@ -55,7 +60,7 @@ export default function App() {
       return
     }
     if(keyboardPressed === "+/-"){
-
+      setCurrentNumber(currentNumber *-1)
       return
     }
     if(keyboardPressed === "AC"){
